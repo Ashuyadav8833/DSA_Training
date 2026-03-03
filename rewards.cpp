@@ -1,35 +1,30 @@
 #include<iostream>
 using namespace std;
-
-int main() {
-    int a,b,n;
-
-    for (int i=0; i<3; i++) {
-        int temp;
-        cin >> temp;
-        a += temp;
-    }
-    for (int i=0; i<3; i++) {
-        int temp;
-        cin >> temp;
-        b += temp;
-    }
-    cin >> n; 
-
-    int a_units = a/5;
-    if (a%5 != 0)
-        a_units++;
-
-    int b_units = b/10;
-    if (b%10 != 0)
-        b_units++;
-
-    n = n - a_units - b_units;
-
-    if (n>=0)
-        cout << "YES";
-    else
-        cout << "NO";
-
-    return 0;
+ 
+int main(){
+	int a1,b1,c1;
+	int a2,b2,c2;
+	int n;
+	cin>>a1>>b1>>c1;
+	cin>>a2>>b2>>c2;
+	cin>>n;
+ 
+	int cuptotal=a1+b1+c1;
+	int medaltotal=a2+b2+c2;
+ 
+	int x=cuptotal/5;
+	if(cuptotal%5!=0){
+		x++;
+	}
+	int y=medaltotal/10;
+	if(medaltotal%10!=0){
+		y++;
+	}
+	if(x+y<=n){
+		cout<<"YES"<<endl;
+	}
+	else{
+		cout<<"NO"<<endl;
+	}	
+	
 }
